@@ -18,7 +18,11 @@
     line-height:39px;
     vertical-align: middle;
     outline:none;
+    font-size: 12px;
     box-shadow:none;
+}
+.SearchBar input[type=search]:focus{
+    color: var(--VertX);
 }
 .SearchBar .Scan{
     position: absolute;

@@ -51,9 +51,23 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
+
+.Padding-All{
+    padding: 8px;
+}
+
+.Text-Center{
+    vertical-align: middle;
+    text-align: center;
+}
+
 .uppercase,
 .Uppercase{
     text-transform: uppercase;
+}
+.lowercase,
+.Lowercase{
+    text-transform: lowercase;
 }
 
 html{
@@ -77,6 +91,9 @@ html,body{
 }
 *{
     box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
 }
 a[href]{
     text-decoration: none;

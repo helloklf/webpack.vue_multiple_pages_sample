@@ -8,13 +8,6 @@ new Vue({
   el: '#page',
   data: {
     currentRoute: window.location.pathname
-  }
-  /*,
-  computed: {
-    ViewComponent () {
-      return routes[this.currentRoute] || NotFound;
-    }
-  }
-  */
-  , render(h) { return h(Page) }
+  },
+  render(h) { return h(Page) }
 });

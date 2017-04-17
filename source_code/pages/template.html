@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <div id="page" class="MaxSize AppRoot"></div>
-    <script src="./scripts/<%= htmlWebpackPlugin.options.jsfile %>"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <div id="page"></div>
+  <!--
+      htmlWebpackPlugin.options.jsfile表达式将自动替换为 “单前页面名.js”
+      例如： /release/about.html 最终会引用 /release/scripts/about.js 文件
+    -->
+  <script src="./scripts/<%= htmlWebpackPlugin.options.jsfile %>"></script>
+</body>
+
 </html>

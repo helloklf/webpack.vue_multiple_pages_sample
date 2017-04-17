@@ -1,9 +1,9 @@
 {
-  "name": "my-project",
-  "description": "A Vue.js project",
+  "name": "webpack.vue_multiple_pages_sample",
+  "description": "A webpack and Vue.js project",
   "version": "1.0.0",
-  "author": "",
-  "private": true,
+  "author": "helloklf",
+  "private": false,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
@@ -12,22 +12,23 @@
     "vue": "^2.1.0"
   },
   "devDependencies": {
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "cross-env": "^3.0.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "cross-env": "^3.2.4",
     "css-loader": "^0.25.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.9.0",
     "glob": "^7.1.1",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
     "surge": "^0.18.0",
-    "url-loader": "^0.5.7",
-    "vue-html-loader": "^1.2.3",
-    "vue-loader": "^10.0.0",
-    "vue-style-loader": "^2.0.0",
-    "vue-template-compiler": "^2.1.0",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.2.0"
+    "url-loader": "^0.5.8",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^10.3.0",
+    "vue-style-loader": "^2.0.5",
+    "vue-template-compiler": "^2.2.6",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }

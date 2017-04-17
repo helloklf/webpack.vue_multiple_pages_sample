@@ -1,12 +1,12 @@
 <template>
     <div class="AppNavBar">
         <span class="AppNavBarItem"
-              v-bind:class="{ Active:menu.Selected }"
-              v-for="menu in menus"
-              v-bind:page-key="menu.Key"
+              v-bind:class="{ Active:page.Selected }"
+              v-for="page in pages"
+              v-bind:page-key="page.Key"
               v-on:click="nav">
-                        <span class="symbol">{{menu.Icon}}</span>
-        <label>{{menu.Title}}</label>
+                            <span class="symbol">{{page.Icon}}</span>
+        <label>{{page.Title}}</label>
         </span>
     </div>
 </template>
@@ -24,3 +24,7 @@ export default {
     }
 };
 </script>
+
+<style>
+@import "../Styles/AppNavBar.css";
+</style>
