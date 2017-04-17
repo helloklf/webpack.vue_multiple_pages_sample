@@ -1,0 +1,70 @@
+.AppRoot{
+    background: #f8f8f8;
+    padding-bottom: 50px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.AppNavBar{
+    display: flex;
+    flex-flow: row;
+    user-select: none;
+    overflow: hidden;
+    height: 50px;
+    border-top: 1px solid #eee;
+    box-shadow: 0 -2px 2px #ddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    background: #fff;
+}
+.AppNavBarItem{
+    flex: 1;
+    text-align: center;
+    height: 49px;
+    cursor: pointer;
+    position: relative;
+}
+.AppNavBarItem>*{
+    display: block;
+}
+.AppNavBarItem>.symbol{
+    font-size:22px; 
+    opacity: 0.7;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.AppNavBarItem>label{
+    font-size: 10px;
+    line-height: 1em;
+    font-weight: 500;
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+.AppNavBarItem sup{
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 11px;
+    transform: scale(0.6);
+    background: #dd3300;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    height:24px;
+    margin: auto;
+}
+.AppNavBarItem.Active{
+    color: #0094ff;
+    color: var(--ThemeColor);
+}

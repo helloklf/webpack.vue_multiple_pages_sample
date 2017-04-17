@@ -1,0 +1,441 @@
+/*
+内容：通用样式
+*/
+*{
+    /*去除浏览器点击时的高亮效果，尤其是对于手机浏览器*/
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.wechat,
+.WeChat{
+    color: rgb(81,195,50);
+}
+.mongo,
+.Mongo{
+    color: rgb(127,200,87);
+}
+.vue,
+.Vue{
+    color: rgb(65,184,131);
+}
+.vertx,
+.VertX{
+    color: rgb(120,43,144);
+}
+@keyframes blockLoad{
+    0%{
+        opacity: 0.5;
+        transform:translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform:translateY(0%);
+    }
+}
+.block,
+.Block{
+    border-radius: 4px;
+    box-shadow: 0 0 2px #ccc;
+    margin: 4px;
+    background: #fff;
+    animation: blockLoad 0.4s;
+}
+.block,
+.Block>*{
+    border-radius: 4px;
+}
+
+.flex—rb,
+.FlexRB{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.uppercase,
+.Uppercase{
+    text-transform: uppercase;
+}
+
+html{
+    --WeChat:rgb(81,195,50);
+    --Mongo:rgb(127,200,87);
+    --Vue: rgb(65,184,131);
+    --VertX:rgb(120,43,144);
+    --ThemeColor : rgb(70,144,255);
+    --ThemeColorLight : lightskyblue;
+    --ThemeColorDark:rgb(40,105,225);
+    --PageRootPadding:12px;
+}
+html,body{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-family:微软雅黑,等线,浪漫雅圆;
+    font-size: 14px;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+a[href]{
+    text-decoration: none;
+}
+.tb,.table
+.TB,.Table{
+    display: table;
+    width: 100%;
+    padding: 0;
+    max-width: 100% !important;
+}
+.tr,.th,
+.TR,.TH{
+    max-width: 100% !important;
+    display:table-row;
+    padding: 0;
+}
+
+.TH>*,.th>*
+.TR>*,.tr>*,
+.TD,.td{
+    vertical-align: top;
+    display: table-cell;
+    padding: 0;
+}
+.MaxSize,.maxsize{
+    display: block !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+small,cite{
+    color:#888;
+    font-size:0.8em;
+}
+label{
+    font-weight: 600;
+}
+fieldset,.fieldset{
+    display: block;
+    margin: 0;
+    padding: 12px;
+    border: none;
+}
+fieldset>.InputRow,.fieldset>.InputRow{
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.InputRow>input{
+    display: block;
+    font-size: 13px;
+    line-height: 1em;
+}
+.InputRow>input:focus{
+    color: var(--ThemeColor);
+}
+.InputRow>input::selection{
+    background: #bbb;
+}
+fieldset input,
+.fieldset input,
+fieldset select,
+.fieldset select{
+    padding:6px 8px;
+}
+.InputRow>select,
+.InputRow>input[type=text],
+.InputRow>input:not([type]),
+.InputRow>label,
+.InputRow>.Tips{
+    width: 250px;
+    max-width: 100%;
+    outline: none;
+}
+.InputRow>label{
+    display: block;
+    padding: 0 0 4px 0;
+    color: #888;
+    font-size: 12px;
+}
+.InputRow>.Tips{
+    display: block;
+    font-size: 11px;
+    text-align: right;
+    padding-top: 4px;
+    color: #ccc;
+    vertical-align: middle;
+    line-height: 1em;
+}
+.InputRow>.Tips::before{
+    font-family: Symbol;
+    user-select: none;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 11px;
+    content: "　";
+    padding: 0 4px 0 0;
+}
+.InputRow>.Tips:not(:empty)::before{
+    content: "";
+}
+.InputRow>.Tips.Success:not(:empty)::before{
+    content: "";
+    color:#4b0;
+}
+.InputRow>.Tips.Error:not(:empty)::before{
+    content: "";
+    color: #b40;
+}
+.InputRow>.Tips:empty,
+.InputRow>.Tips.Hide{
+    /*display: none;*/
+}
+.InputRow button{
+    background: #fff;
+    border: 1px solid #888;
+    border-radius:3px; 
+    padding:7px 12px;
+    font-size: 13px;
+    min-width: 70px;
+    cursor: pointer;
+    outline: none;
+}
+.InputRow button:hover{
+    color:  var(--ThemeColor);
+}
+.InputRow button:active{
+    background:  var(--ThemeColor);
+    color: #fff;
+    border-color:var(ThemeColorLight); 
+}
+.InputRow button[disabled]{
+    background: #ccc;
+    color: #eee;
+}
+input:disabled,
+input[disable]{
+    background: #eee;
+    color: #fff;
+    border-style:solid 1px #ccc; 
+    outline: none;
+}
+
+
+.ToggleCheckbox{
+    display: none !important;
+}
+.ToggleCheckbox+label{
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s;
+    vertical-align: middle;
+    font-size: 15px;
+    background: transparent;
+    border-width:0px; 
+    
+    /*由于Edge浏览器缺陷，导致在:checked状态下::before的背景错误的填充到整个元素上，因此增加此属性*/
+    border-radius: 11px;
+}
+.ToggleCheckbox + label::selection{
+    background: transparent;
+}
+.ToggleCheckbox+label>*{
+    vertical-align: middle;
+    line-height: 1em;
+}
+.ToggleCheckbox + label::before{
+    font-family: "Symbol";
+    content: "";
+    line-height: 22px;
+    height: 22px;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 11px;
+    background-color: #eee;
+    color: #888;
+    padding: 0 35px 0 0;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+.ToggleCheckbox:checked + label::before{
+    color: #fff;
+    background-color: var(--ThemeColor);
+    border-radius: 11px;
+    border-color: var(--ThemeColorDark);
+    padding: 0 0 0 35px;
+    /*text-align: right;*/
+}
+
+@media(max-width:767px){
+    .InputRow{
+        display: inline-block
+    }
+    .InputRow button{
+        display: block;
+        width: 250px;
+        max-width: 100%;
+        outline: none !important;
+        background:  var(--ThemeColor);
+        color: #fff;
+        border-color:var(ThemeColorLight); 
+    }
+    .InputRow button,.InputRow select,.InputRow input[type=text],.InputRow > label,.InputRow > .Tips,fieldset>.Align,.fieldset>.Align{
+        margin:0 auto;
+        max-width: 100% !important;
+        width: 100%;
+    }
+    .InputRow button:hover{
+        color:unset;
+    }
+    .InputRow button:active{
+        color: #fff;
+        background: var(ThemeColorLight);
+        color: #000;
+    }
+}
+
+@media(min-width:768px){    
+    .Grid.TB,
+    .Grid.Table{
+        border:1px solid #ccc;
+        line-height: 1.6em;
+        transition: all 0.3s;
+    }
+    .Grid.TB .TH,
+    .Grid.Table .TH{
+        font-weight:600;
+        color:#555;
+    }
+    .Grid.TB .TR,
+    .Grid.Table .TR{
+        font-weight:500;
+        color:#888;
+        transition: all 0.3s;
+    }
+    .Grid.TB .TR:hover,
+    .Grid.Table .TR:hover{
+        background: #eee;
+    }
+    .Grid.TB .TR>*:hover,
+    .Grid.Table .TR>*:hover{
+        background: #ddd;
+    }
+    .Grid.TB .TR>*:active,
+    .Grid.Table .TR>*:active{
+        transform: scale(1.1);
+    }
+    .Grid.TB .TH,
+    .Grid.Table .TH{
+        line-height: 2em;
+    }
+    .Grid.TB .TH>*,
+    .Grid.TB .TR>*,
+    .Grid.TB >.TD,
+    .Grid.Table .TH>*,
+    .Grid.Table .TR>*,
+    .Grid.Table >.TD{
+        padding:0.4em;
+        text-align:center;
+        transition: all 0.3s;
+    }
+    .Grid.TB .TH:not(:last-child)>*,
+    .Grid.TB .TR:not(:last-child)>*,
+    .Grid.Table .TH:not(:last-child)>*,
+    .Grid.Table .TR:not(:last-child)>*{
+        border-bottom:1px solid #ccc;
+    }
+    .Grid.TB .TH>*:not(:last-child),
+    .Grid.TB .TR>*:not(:last-child),
+    .Grid.Table .TH>*:not(:last-child),
+    .Grid.Table .TR>*:not(:last-child){
+        border-right:1px solid #ccc;
+        cursor: pointer;
+    }
+    .Grid.TB .Symbol,
+    .Grid.Table .Symbol{
+        min-width:30px;
+        text-align:center;
+        display:inline-block;
+        color:#0094ff;
+        color:var(--ThemeColor);
+    }
+}
+@media(max-width:767px){
+    .Grid.Table{
+        color: #aaa;
+        font-size: 13px;
+    }
+    .Grid.Table>.TH{
+        display: none;
+    }
+    .Grid.Table,
+    .Grid.Table>.TR,
+    .Grid.Table>.TR>*,
+    .Grid.Table>.TTH>*,
+    .Grid.Table>*>*{
+        display: block;
+        line-height: 1.6em;
+    }
+    
+    .Grid.Table>.TR>*:first-child:not(.ID){
+        font-weight: 600;
+        color: #555;
+    }
+    .Grid.Table>*:not(:last-child){
+        border-bottom: 1px solid #eee;
+    }
+    .Grid.Table>*{
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+        position: relative;
+    }
+    .Grid.Table>*:active{
+        background: #f8f8f8;
+    }
+    .Grid.TB .Symbol,
+    .Grid.Table .Symbol{
+        min-width:32px;
+        padding: 0.5em;
+        text-align:center;
+        display:inline-block;
+        color:#0094ff;
+        font-size:16px;
+        color:var(--ThemeColor);
+    }
+}
+
+hr{
+    background-color:#aaa; 
+    outline: none;
+    height: 1px;
+    border: none;
+}
+
+
+::-webkit-scrollbar
+{
+    width: 1px;
+    height: 1px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color:transparent;
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+    height: 1px;
+    background-color: #ccc;
+    border-radius: 0;
+}
+::-webkit-scrollbar-thumb:horizontal
+{
+    width: 1px;
+    background-color: #ccc;
+    border-radius: 0;
+}

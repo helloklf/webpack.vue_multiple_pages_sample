@@ -1,0 +1,99 @@
+.Home{
+    height: 100%;
+    position: relative;
+}
+.SearchBar{
+    height:40px;
+    border:solid #eee;
+    position: relative;
+    border-width: 0 0 1px 0;
+    background: #fff;
+}
+.SearchBar input[type=search]{
+    border:none;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0 62px 0 12px;
+    line-height:39px;
+    vertical-align: middle;
+    outline:none;
+    box-shadow:none;
+}
+.SearchBar .Scan{
+    position: absolute;
+    right: 0;
+    height: 39px;
+    line-height: 39px;
+    bottom: 0px;
+    width: 48px;
+    text-align: center;
+    color: #aaa;
+    border-left: 1px solid #eee;
+}
+.Home .Block .Image{
+    background-image:url(../../assets/logo.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    height: 180px;
+    position: relative;
+}
+.Home .Block .Image .Text{
+    margin: 4px;
+    color: #aaa;
+    vertical-align: middle;
+}
+
+.Home .Block .BitIcon{
+    border-radius:50%; 
+    border: 1px solid #eee;
+    background: #fff;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+.Home .Block.UserInfos{
+    padding: 8px;
+    display: flex;
+    line-height: 1.3em;
+}
+.Home .Block.UserInfos *{
+    vertical-align: middle;
+}
+.Home .Block .BitIcon.UserHeadImage{
+    background-image:url(../../assets/uh.jpg);
+    height: 64px;
+    width: 64px;
+    margin-right: 8px;
+}
+
+.Home .Block .TextBtn{
+    margin-right:24px; 
+    display: inline-block;
+    color: rgb(65,184,131);
+    color: var(--Vue);
+    transition: 0.3s all ease-in-out;
+    font-size: 12px;
+    cursor: pointer;
+}
+.Home .Block .TextBtn:active{
+    transform: scale(0.8);
+}
+
+.Home .Block.OrderInfos{
+    display: flex;
+    padding: 8px;
+    line-height: 1.6em;
+}
+.Home .Block.OrderInfos .Text{
+    padding-left: 8px;
+}
+.Home .Block.OrderInfos .BitIcon.Product{
+    background-image:url(../../assets/product.jpg);
+    height: 64px;
+    width: 64px;
+    border-radius: 0;
+}

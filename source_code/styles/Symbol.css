@@ -1,0 +1,47 @@
+/*
+内容：Symbol字体库
+*/
+
+@font-face {
+    font-family: 'Symbol';
+	src: url('./SymbolFonts/segmdl2.eot');
+    src: url("./SymbolFonts/segmdl2.woff") format("woff"), url('./SymbolFonts/segmdl2.ttf') format('truetype'), url('./SymbolFonts/segmdl2.svg') format('svg'); /*Segoe MDL 2 Assets*/
+}
+
+.FontIcon,
+Symbol,
+symbol,
+.symbol,
+.Symbol{
+    font-family: 'Symbol','微软雅黑';
+    user-select: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.Symbol:active,.symbol:active,symbol:active,Symbol:active{
+    transform: scale(0.8);
+}
+.FontIcon:active{
+    transform: scale(0.9);
+}
+.FontIcon::selection{
+    background: none;
+    color: none;
+}
+.FontIcon:active{
+    color: #0094ff;
+    color: var(--ThemeColor);
+    border: 2px solid var(--ThemeColor);
+}
+
+.FontIcon{
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    line-height: 38px;
+    border: 2px solid var(--ThemeColor);
+    border-radius:50%;
+    height: 42px;
+    width: 42px;
+    font-weight: 600;
+}
